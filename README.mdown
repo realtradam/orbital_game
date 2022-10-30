@@ -1,0 +1,3 @@
+# Orbital Game
+
+A game made by [Arnold](https://github.com/arngo) and myself for both fun and to practice C++.

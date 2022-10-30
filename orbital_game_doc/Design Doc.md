@@ -5,6 +5,7 @@ A single player 2D space exploration game with realistic orbital mechanics. Expl
 ## Inspiration
 
 - Famicom Art:
+"Execute daring gravity swings and ballistic maneuvers in CALLISTO, an orbital-mechanics action game set in the Jupiter system."
 ![](https://famicase.com/22/softs/047.jpg)
 
 - Kerbal Space Program
@@ -38,6 +39,8 @@ Goal is to practice C++, as well as practice using common complex elements in ga
 ## Basic UI
 
 Game will have a minimal UI showing both the map and the real view at the same time. When a player is far out in outer space then the game will have the map be in large view and the real view in ther corner. If the player is landing on a surface then the view will automatically switch to have the real view be primary and the map in the corner.
+
+Player gets objectives to explore specific points in the solar system, and then gets rewarded with upgrades or points.
 
 If fuel will be implemeneted, a small guage in the corner for thruster and rcs fuel.
 
