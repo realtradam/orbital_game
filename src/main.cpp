@@ -14,6 +14,8 @@ int main(void)
 
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
+	
+	auto ship = Resources::Sprite("ship", (Rectangle){1365,1696,198,188});
 
     // Main game loop
     while (!WindowShouldClose())    // Detect window close button or ESC key
@@ -30,8 +32,8 @@ int main(void)
             ClearBackground(RAYWHITE);
 
             DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
-            ;
-            DrawTexture(Resources::useTexture("ship"), 0, 0, WHITE);
+            //DrawTexture(Resources::useTexture("ship"), 0, 0, WHITE);
+			ship.draw(100,100);
 
         EndDrawing();
         //----------------------------------------------------------------------------------

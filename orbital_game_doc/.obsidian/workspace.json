@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "4eafccb3ae5c4cab",
@@ -136,7 +137,7 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "387ea3eb3fadc8cb",
+  "active": "5a480a8cd616d9c5",
   "lastOpenFiles": [
     "Example Doc.md",
     "Design Doc.md"
