@@ -1,5 +1,6 @@
 #include "raylib.h"
-#include "resources.h"
+#include "resources.hpp"
+#include "renderer.hpp"
 //------------------------------------------------------------------------------------
 // Program main entry point
 //------------------------------------------------------------------------------------
@@ -15,7 +16,7 @@ int main(void)
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
 	
-	auto ship = Resources::Sprite("ship", (Rectangle){1365,1696,198,188});
+	auto ship = Renderer::Sprite("ship", (Rectangle){1365,1696,198,188});
 
     // Main game loop
     while (!WindowShouldClose())    // Detect window close button or ESC key

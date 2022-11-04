@@ -1,9 +1,10 @@
-#include <unordered_map>
+#pragma once
 #include <string>
 #include "raylib.h"
 
-namespace Resources {
-	Texture useTexture(std::string id);
+
+
+namespace Renderer {
 	class Sprite {
 		public:
 			std::string texture_name;
