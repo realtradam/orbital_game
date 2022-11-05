@@ -9,14 +9,15 @@ int main(void)
     // Initialization
     //--------------------------------------------------------------------------------------
     const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int screenHeight = 800;
 
     InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
     SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
     //--------------------------------------------------------------------------------------
 	
-	auto ship = Renderer::Sprite("ship", (Rectangle){1365,1696,198,188});
+	auto ship = Renderer::Sprite("kenneySpaceShooter", (Rectangle){1365,1696,198,188}, (Vector2){19.80/2,18.80/2});
+	auto rock = Renderer::Sprite("kenneySpaceShooter", (Rectangle){0,800,440,442}, (Vector2){44.00/2, 44.20/2});
 
     // Main game loop
     while (!WindowShouldClose())    // Detect window close button or ESC key
@@ -30,11 +31,12 @@ int main(void)
         //----------------------------------------------------------------------------------
         BeginDrawing();
 
-            ClearBackground(RAYWHITE);
+            ClearBackground(BLACK);
 
-            DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+            DrawText("Space!", 190, 200, 20, LIGHTGRAY);
             //DrawTexture(Resources::useTexture("ship"), 0, 0, WHITE);
-			ship.draw(100,100);
+			ship.draw(100,100, 0.1);
+			rock.draw(750,750, 0.1);
 
         EndDrawing();
         //----------------------------------------------------------------------------------

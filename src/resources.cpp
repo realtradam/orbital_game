@@ -6,7 +6,7 @@
 
 namespace Resources {
 	static std::unordered_map<std::string, std::string> textureFiles = {
-		{"ship", "./assets/textures/spaceShooter2_spritesheet_2X.png"}
+		{"kenneySpaceShooter", "./assets/textures/spaceShooter2_spritesheet_2X.png"}
 	};
 	static std::unordered_map<std::string, Texture> textures;
 	Texture useTexture(std::string id) {
