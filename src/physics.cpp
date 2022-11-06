@@ -17,11 +17,13 @@ namespace Physics {
 	Body rock = Body((Vector2){400,400}, (Vector2){0,0}, 50);
 
 	//0.01667
-	void step(float deltaTime) {
-		// calculate position change
-        Vector2 grav_force = get_grav_force(ship, rock);
-        ship.velocity = Vector2Add(ship.velocity, Vector2Scale(grav_force, deltaTime));
-		ship.position = Vector2Add(ship.position, Vector2Scale(ship.velocity, deltaTime));
+	void step(float deltaTime, int times) {
+        for (int i = 0; i < times; i++) {
+            // calculate position change
+            Vector2 grav_force = get_grav_force(ship, rock);
+            ship.velocity = Vector2Add(ship.velocity, Vector2Scale(grav_force, deltaTime));
+            ship.position = Vector2Add(ship.position, Vector2Scale(ship.velocity, deltaTime));
+        }
 	}
 
     Vector2 get_grav_force(Body body1, Body body2) {

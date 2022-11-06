@@ -33,9 +33,7 @@ int main(void)
 
 		// Draw
 		//----------------------------------------------------------------------------------
-		for (int i = 0; i < 50000; i++) {
-			Physics::step(0.001);
-		}
+        Physics::step(0.001,50000);
 		std::cout << std::to_string(Vector2Distance(Physics::ship.position, Physics::rock.position)) << std::endl;
 		BeginDrawing();
 
