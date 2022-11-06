@@ -16,4 +16,5 @@ namespace Physics {
 
 	//0.01667
 	void step(float deltaTime);
+    Vector2 get_grav_force(Body body1, Body body2);
 }

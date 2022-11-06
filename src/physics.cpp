@@ -18,13 +18,15 @@ namespace Physics {
 
 	//0.01667
 	void step(float deltaTime) {
-		// calculate velocity change
-		//pow((rock.position.x - ship.position.x),2) + pow((rock.position.y - ship.position.y),2);
-		float distance = Vector2DistanceSqr(ship.position, rock.position);
-		Vector2 force = Vector2Normalize(Vector2Subtract(rock.position, ship.position));
-		ship.velocity = Vector2Add(ship.velocity, Vector2Scale(force, ship.mass * (rock.mass / (distance/*this is pre squared*/)) * deltaTime));
 		// calculate position change
+        Vector2 grav_force = get_grav_force(ship, rock);
+        ship.velocity = Vector2Add(ship.velocity, Vector2Scale(grav_force, deltaTime));
 		ship.position = Vector2Add(ship.position, Vector2Scale(ship.velocity, deltaTime));
 	}
 
+    Vector2 get_grav_force(Body body1, Body body2) {
+		float distance_sqr = Vector2DistanceSqr(body1.position, body2.position);
+		Vector2 direction = Vector2Normalize(Vector2Subtract(body2.position, body1.position));
+        return Vector2Scale(direction, body1.mass * (body2.mass / (distance_sqr)));
+    }
 }
