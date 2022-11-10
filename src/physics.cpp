@@ -10,8 +10,27 @@ namespace Physics {
 	//force = s_mass * grav
 	//force = s_mass * (grav_const * (r_mass / distance^2))
 
+    std::unordered_set<DynamicBody*>DynamicBody::dynamicBodies;
+    std::unordered_set<KinematicBody*>KinematicBody::kinematicBodies;
+
 	Body::Body(Vector2 position, Vector2 velocity, float mass):position(position), velocity(velocity), mass(mass) {
 	}
+
+	DynamicBody::DynamicBody(Vector2 position, Vector2 velocity, float mass):Body(position, velocity, mass) {
+        dynamicBodies.insert(this);
+	}
+
+    DynamicBody::~DynamicBody() {
+        dynamicBodies.erase(this);
+    }
+
+	KinematicBody::KinematicBody(Vector2 position, Vector2 velocity, float mass):Body(position, velocity, mass) {
+        kinematicBodies.insert(this);
+	}
+
+    KinematicBody::~KinematicBody() {
+        kinematicBodies.erase(this);
+    }
 
 	Body ship = Body((Vector2){200,400}, (Vector2){0,0.5}, 1);
 	Body rock = Body((Vector2){400,400}, (Vector2){0,0}, 50);
