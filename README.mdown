@@ -1,3 +1,5 @@
-# Orbital Game
+# Orbital Demo
 
-A game made by [Arnold](https://github.com/arngo) and myself for both fun and to practice C++.
+A demo made by [Arnold](https://github.com/arngo) and myself for both fun and to practice C++. Implements realistic orbital motion.
+
+![orbital-e](https://user-images.githubusercontent.com/11139432/215062435-e275053d-fbce-4809-b5b9-70c1dc1b6ff6.gif)
